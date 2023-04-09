@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-  <script src="app.js" defer></script>
-  <title>Paint Your Own Pictures</title>
-</head>
-<body>
-  <h1>Paint Your Own Pictures</h1>
-  <article class="canvas-container">
-    <label>
-      Set Width: <input type="text" onchange="setWidth(this.value)">
-    </label>
-    <label>
-      Set Height: <input type="text" onchange="setHeight(this.value)">
-    </label>
-    <canvas class="first-canvas"  onmousedown="startPaint()" onmousemove="doPaint(event.offsetX , event.offsetY)" onmouseup="endPaint()">
+    <script src="app.js" defer></script>
+    <title>Paint Your Own Pictures</title>
+  </head>
+  <body>
+    <h1>Paint Your Own Pictures</h1>
+    <article class="canvas-container">
+      <label> Set Width: <input type="text" onchange="setWidth(this.value)" /> </label>
+      <label> Set Height: <input type="text" onchange="setHeight(this.value)" /> </label>
+      <canvas class="first-canvas" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX , event.offsetY)" onmouseup="endPaint()"> </canvas>
+      <label class="label--color">
+        Brush Color : 
+        <input type="color" value="#333" onchange="changeColor(this.value)">
+      </label>
+      <label class="label--size">
+        Brush Color : 
+        <input class="sizeInput" type="range" min="1" max="50" value="50" oninput="resizeBrush(this.value)">
+        <output class="sizeOutput">50</output>
 
-    </canvas>
-
-  </article>
-</body>
+      </label>
+      <button class="btn" onclick="clearCanvas()">Clear Canvas</button>
+    </article>
+  </body>
 </html>

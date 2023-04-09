@@ -50,3 +50,13 @@ function doPaint(x,y) {
     paintCircle(x,y);
   }
 }
+
+function changeColor(newColor) {
+  color = newColor;
+}
+
+function resizeBrush(newSize) {
+  radius = newSize;
+  document.querySelector('.sizeOutput').value = newSize;
+  
+}
