@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <title>Mini Project</title>
+  </head>
+  <body>
+    <main>
+      <section class="filter">
+        <h1 class="filter__heading">Filter Fun</h1>
+        <canvas class="filter__canvas"></canvas>
+        <h2 class="filter__subheading">Load Image</h2>
+        <p>
+          <input multiple="false" accept="images/*" id="fInput" type="file" onchange="upload()" />
+        </p>
+        <div class="filters-container">
+          <h2 class="filter__subheading">Choose Filter</h2>
+          <button disabled class="btn btn--gray" onclick="doGray()">Grayscale</button>
+          <button disabled class="btn btn--red" onclick="doRed()">Red</button>
+          <button disabled class="btn btn--reset" onclick="resetImage()">Reset Image</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
