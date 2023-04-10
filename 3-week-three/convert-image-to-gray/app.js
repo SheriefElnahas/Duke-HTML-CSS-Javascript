@@ -1,4 +1,5 @@
 let image;
+
 const originalCanvas = document.querySelector('#originalCanvas');
 const grayCanavas = document.querySelector('#grayCanvas')
 
@@ -25,4 +26,3 @@ function makeGray() {
   }
   image.drawTo(grayCanavas);
 }
-
